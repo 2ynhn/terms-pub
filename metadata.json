@@ -1,5 +1,5 @@
 {
   "name": "Terms2HTML Converter",
-  "description": "A professional tool to convert legal documents (DOC/DOCX) into clean, structured HTML snippets for web integration, preserving exact wording.",
+  "description": "A professional tool to convert legal documents (DOC/DOCX/PDF) into clean, structured HTML snippets for web integration, preserving exact wording.",
   "requestFramePermissions": []
 }

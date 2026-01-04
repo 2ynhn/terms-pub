@@ -30,7 +30,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelect, disabled }) =
       if (isValidFile(file)) {
         onFileSelect(file);
       } else {
-        alert('지원되지 않는 파일 형식입니다. .docx 형식을 가장 권장합니다.');
+        alert('지원되지 않는 파일 형식입니다. .docx 또는 .pdf 파일을 권장합니다.');
       }
     }
   };
@@ -43,7 +43,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelect, disabled }) =
   };
 
   const isValidFile = (file: File) => {
-    const validExtensions = ['.doc', '.docx'];
+    const validExtensions = ['.doc', '.docx', '.pdf'];
     const fileName = file.name.toLowerCase();
     return validExtensions.some(ext => fileName.endsWith(ext));
   };
@@ -73,7 +73,7 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelect, disabled }) =
         type="file"
         ref={fileInputRef}
         onChange={handleFileInputChange}
-        accept=".doc,.docx"
+        accept=".doc,.docx,.pdf"
         className="hidden"
         disabled={disabled}
       />
@@ -89,10 +89,10 @@ const FileUploader: React.FC<FileUploaderProps> = ({ onFileSelect, disabled }) =
           약관 문서를 드래그하여 업로드하세요
         </p>
         <p className="text-slate-500 text-sm mt-1">
-          DOCX (권장) 또는 DOC 파일 지원
+          DOCX, PDF (권장) 또는 DOC 파일 지원
         </p>
         <p className="text-xs text-slate-400 mt-2">
-          * 옛날 .doc 파일은 내용 추출이 부정확할 수 있으니 .docx 사용을 권장합니다.
+          * PDF 파일은 레이아웃과 표 구조를 더 정확하게 유지합니다.
         </p>
       </div>
       

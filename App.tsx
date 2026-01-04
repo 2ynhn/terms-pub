@@ -42,7 +42,7 @@ const App: React.FC = () => {
             약관 문서를 HTML로 즉시 변환하세요
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            DOCX 파일을 업로드하면 <code className="bg-slate-100 px-1.5 py-0.5 rounded text-blue-600 font-mono">.termsInner</code> 구조의 
+            DOCX 또는 PDF 파일을 업로드하면 <code className="bg-slate-100 px-1.5 py-0.5 rounded text-blue-600 font-mono">.termsInner</code> 구조의 
             깨끗한 HTML로 변환해 드립니다. 원문 수정 없이 태그만 정확하게 입힙니다.
           </p>
         </div>
